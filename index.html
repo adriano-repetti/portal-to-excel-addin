@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arm Pelion</title>
+
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/beta/hosted/office.debug.js"></script>
+    <link rel="stylesheet" href="node_modules/office-ui-fabric-js/dist/css/fabric.min.css" />
+    <link rel="stylesheet" href="node_modules/office-ui-fabric-js/dist/css/fabric.components.css" />
+    <link href="app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome">
+    <header>
+        <h1>Resource Observer</h1>
+    </header>
+
+    <main>
+        <div class="ms-TextField">
+            <label class="ms-Label">API Key:</label>
+            <input id="api-key" class="ms-TextField-field" type="text" value="" placeholder="">
+        </div>
+        <div class="ms-TextField">
+            <label class="ms-Label">Host:</label>
+            <input id="host" class="ms-TextField-field" type="text" value="https://api.us-east-1.mbedcloud.com" placeholder="">
+        </div>
+        <hr>
+        <div class="ms-TextField">
+            <label class="ms-Label">Device ID</label>
+            <input id="device-id" class="ms-TextField-field" type="text" value="01681908e1ba00000000000100100089" placeholder="">
+        </div>
+        <div class="ms-TextField">
+            <label class="ms-Label">Resource URL</label>
+            <input id="resource-uri" class="ms-TextField-field" type="text" value="/3202/0/5600" placeholder="">
+        </div>
+
+        <button id="subscribe" class="ms-Button ms-Button--primary">
+            <span class="ms-Button-label">Add subscription</span>
+        </button>
+    </main>
+
+    <script type="text/javascript" src="node_modules/core-js/client/core.js"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
+    <script type="text/javascript" src="bundle.js" ></script>
+
+    <script>
+        const textFields = document.querySelectorAll(".ms-TextField");
+        for (let i = 0; i < textFields.length; i++) {
+            new fabric['TextField'](textFields[i]);
+        }
+
+        var buttons = document.querySelectorAll(".ms-Button");
+        for (let i = 0; i < buttons.length; i++) {
+            new fabric['Button'](buttons[i]);
+        }        
+    </script>
+</body>
+
+</html>
