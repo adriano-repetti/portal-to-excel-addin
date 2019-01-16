@@ -2,6 +2,8 @@
 This project demonstrates how to create a Microsoft Excel add-in to observe live resources in the
 Arm Pelion environment.
 
+![Integration Example](/assets/example.png)
+
 ## Install
 Clone this repository in a local folder using `git clone` or download and unpack the source code.
 
@@ -62,6 +64,8 @@ This example has been tested with the on-line version of Microsoft Excel but it 
 with the desktop (Windows, iPad and Mac) versions (please consult Microsoft documentation for additional information).
 
 * Sideload the add-in: [Sideload Office Add-ins in Office Online](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/sideload-office-add-ins-for-testing#sideload-an-office-add-in-in-office-online). The manifest file to select is `portal-to-excel-addin-manifest-xml`.
+
+## Use the add-in
 * In the **Home** tab select **Resource Observer** in the **Arm Pelion** group.
 * Enter the API Key: [Integrating web applications](https://cloud.mbed.com/docs/current/integrate-web-app/index.html).
 * Enter the ID of the device and the full URL of the (observable) resource you want to monitor.
